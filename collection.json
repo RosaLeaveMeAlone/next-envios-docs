@@ -1,0 +1,2047 @@
+{
+	"info": {
+		"_postman_id": "9ea6a6de-f232-4626-82a0-c163448a15be",
+		"name": "Next-envios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3498274"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"joel@mail.com\",\r\n    \"password\" : \"123456Aa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/auth/login",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman@mail.com\",\r\n    \"password\" : \"123456\",\r\n    // \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\",\r\n    \"provider_id\" : \"9c65b360-4577-43f4-a494-3f7451c16ec9\",\r\n    \"company_id\" : \"9c65b360-20c2-4c19-b73a-ea789c58d42e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/auth/register",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"joeluzcategui102@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/auth/forgot-password",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"joeluzcategui102@gmail.com\",\r\n    \"token\" : \"df599d66292da1f2f2a265a66805b7757a2d0ff50fcf5e0a6de8174b714ebea0\",\r\n    \"password\" : \"Nextenvios123\",\r\n    \"password_confirmation\" : \"Nextenvios123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/auth/reset-password",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\",\r\n    \"provider_id\" : \"9c65b360-4577-43f4-a494-3f7451c16ec9\",\r\n    \"company_id\" : \"9c65b360-20c2-4c19-b73a-ea789c58d42e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/test",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provider",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|UMbf44DNGI16ii2PdCoBJBStbpMRVHBKIIswHKZlc6c35a8e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Provider",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|rj1fxqcoux8fOuIeZCh1PHGxsChVWxmve6jZyxIXfe9fb56a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Proveedor 1",
+									"type": "text"
+								},
+								{
+									"key": "business_name",
+									"value": "provider S.L",
+									"type": "text"
+								},
+								{
+									"key": "rut",
+									"value": "22222",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "qewqweqwe",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "7777",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "tracking_link",
+									"value": "joel-uzcategui.com",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "9c791ee5-a16c-425f-80a8-99460162129e",
+									"type": "text"
+								},
+								{
+									"key": "company_id",
+									"value": "9c7929d2-2fa6-462f-862d-69bed7780fce",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MRXLC/Pictures/Screenshots/Captura de pantalla 2024-02-05 115933.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Provider",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|sNScVkhG8Y7X6mjHMp8s0CwVvt66do9uhCEJ5nsufe4bddf1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": " Proveedor 1 EDIT",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "business_name",
+									"value": " NOmbre empresa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rut",
+									"value": " 55555",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": " direccion 1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": " 123123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mobile",
+									"value": " 13123123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tracking_link",
+									"value": " aaaaa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "9c796b10-de21-49bf-a21d-fe97fb5e7a0b",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "company_id",
+									"value": "9c796b11-a858-4a57-919f-11449a24d22d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MRXLC/Pictures/Screenshots/Captura de pantalla 2024-02-06 194411.png"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers/9c7c5310-aeec-413c-9b4b-d98a234be4fd",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								"9c7c5310-aeec-413c-9b4b-d98a234be4fd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Provider",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers/9c70419c-2e42-4b3f-895c-8fa3996ef399",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								"9c70419c-2e42-4b3f-895c-8fa3996ef399"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers/9c1cdd5f-66e2-45af-889b-53ba5970b4eb",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								"9c1cdd5f-66e2-45af-889b-53ba5970b4eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"new_users\" : [\"9c65b35f-e0bd-4e8e-ae62-9f52df436572\"],\r\n    \"remove_users\" : []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers/9c65b360-4577-43f4-a494-3f7451c16ec9/sync-users",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								"9c65b360-4577-43f4-a494-3f7451c16ec9",
+								"sync-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|F3dQwcY8qlTgwMziYAD3iJiKf4Z1sHY1wLkDWX7V70aba82c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers/9c72491f-f9f7-466e-9daa-46221a29f9eb/get-users",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								"9c72491f-f9f7-466e-9daa-46221a29f9eb",
+								"get-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Suspension",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|xG9d8lCaIBTDBh4cf3FxvI8DvDLDbRoYIeKkRwFw47a3b595",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/providers/9c725850-0cc1-479e-a453-835e9f566885/toggle-suspension",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"providers",
+								"9c725850-0cc1-479e-a453-835e9f566885",
+								"toggle-suspension"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provider Addresses",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|0RjGsbe81ak1gg4zyJ9R0uhEZg1WMSFrQ6T16Xml95e70e9d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/provider-addresses",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"provider-addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Provider Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|0RjGsbe81ak1gg4zyJ9R0uhEZg1WMSFrQ6T16Xml95e70e9d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dirección por defecto 2\",\r\n    \"address\": \"direccion tttt\",\r\n    \"address2\": null,\r\n    \"provider_id\": \"9c6f1093-c8c5-4f81-acfd-fbff1a38b55a\",\r\n    \"city_id\": \"9c65b357-7c1d-4191-92c2-a400d70c5c89\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/provider-addresses",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"provider-addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Provider Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|0RjGsbe81ak1gg4zyJ9R0uhEZg1WMSFrQ6T16Xml95e70e9d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dirección por defecto EDIT\",\r\n    \"address\": \"direccion tttt\",\r\n    \"address2\": \"EDIT\",\r\n    \"provider_id\": \"9c6f1093-c8c5-4f81-acfd-fbff1a38b55a\",\r\n    \"city_id\": \"9c65b357-7c1d-4191-92c2-a400d70c5c89\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/provider-addresses/9c6f8449-4d11-4f8b-998d-f21171046bb9",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"provider-addresses",
+								"9c6f8449-4d11-4f8b-998d-f21171046bb9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Provider Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JX0oJ6DE4mKQvUrFxx3F8ca9bsDEaG5DAtknc7dSc6dffb1a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/provider-addresses/9c6f8449-4d11-4f8b-998d-f21171046bb9",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"provider-addresses",
+								"9c6f8449-4d11-4f8b-998d-f21171046bb9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|0RjGsbe81ak1gg4zyJ9R0uhEZg1WMSFrQ6T16Xml95e70e9d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/provider-addresses/9c6f8449-4d11-4f8b-998d-f21171046bb9",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"provider-addresses",
+								"9c6f8449-4d11-4f8b-998d-f21171046bb9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|UMbf44DNGI16ii2PdCoBJBStbpMRVHBKIIswHKZlc6c35a8e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "1996-11-02",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Delivery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|FgPnIxsfXr92YueNzf79yyS3V0tirO8vdI9borkl3712b0e7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\" : \"2024-08-17\",\r\n    \"status\" : 0,\r\n    \"provider_id\" : \"9c791ef5-6d1d-4f05-bcad-518cc3d0adf1\",\r\n    \"delivery_status_id\" : \"9c791ee2-3321-4bf1-9546-bbe594f6c7df\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Delivery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|UMbf44DNGI16ii2PdCoBJBStbpMRVHBKIIswHKZlc6c35a8e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"provider_id\" : \"9c7c5310-aeec-413c-9b4b-d98a234be4fd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries/generate-delivery",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries",
+								"generate-delivery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Delivery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|yF4f7E4IjzYxXMUM86JX19yPxf4EHS9BH55Pwh7qd15d37c9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"date\" : \"1996-11-02\",\r\n    //\"status\" : 1,\r\n    //\"provider_id\" : \"9c1ce892-cdb8-4556-8288-76ddabf4f3dc\"\r\n    \"delivery_status_id\" : \"9c65b357-0404-494d-b0ad-53505bffb37e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries/9c65ba27-5ef0-417f-98e5-d308d547f87a",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries",
+								"9c65ba27-5ef0-417f-98e5-d308d547f87a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Delivery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JX0oJ6DE4mKQvUrFxx3F8ca9bsDEaG5DAtknc7dSc6dffb1a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries/9c703bd0-f710-48e3-bc16-e747515432d0",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries",
+								"9c703bd0-f710-48e3-bc16-e747515432d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries/9c1ce8ff-ee3c-40f4-9cc4-0be9b6561afe",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries",
+								"9c1ce8ff-ee3c-40f4-9cc4-0be9b6561afe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|UMbf44DNGI16ii2PdCoBJBStbpMRVHBKIIswHKZlc6c35a8e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries/export",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries",
+								"export"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "1996-11-02",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery Pack",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "16|FF6tq3ERe5qanJ43TFFbuA4ZAc4y69gmAACa8gyQ342173de",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-07-10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Print Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs/9c7d852f-e2b4-454b-bd2f-b61af47db966/print",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs",
+								"9c7d852f-e2b4-454b-bd2f-b61af47db966",
+								"print"
+							],
+							"query": [
+								{
+									"key": "provider_logo",
+									"value": "9c7dbc76-7f6b-4724-9e45-b7431e8c332e",
+									"disabled": true
+								},
+								{
+									"key": "company_logo",
+									"value": "9c7dbcd3-acd0-4a85-a172-30d52bf26e03",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Delivery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Delivery 2\",\r\n    \"rut\" : \"88888\",\r\n    \"address\" : \"asdasd123123\",\r\n    \"address2\" : \"asda123123123dasd\",\r\n    \"phone\" : \"a123123123123sd\",\r\n    \"change\" : true,\r\n    \"pending_payment\" : true,\r\n    \"platform_number\" : \"66666666666666612\",\r\n    \"platform_order\" : \"16666666665\",\r\n    \"comments\" : \"Comentario desde POSTMAN\",\r\n    \"platform_id\" : \"9c6fc1ca-a899-4898-96c7-9e95ff5487a3\",\r\n    \"city_id\" : \"9c6fc1bb-e092-4604-9cae-1ec132e755c8\",\r\n    \"delivery_id\" : \"9c6fc2b6-98e7-45ef-9ba1-aa96650c2bda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MRXLC/Downloads/Ventas_CL_Mercado_Libre_2024-05-30_15-16hs_610888142.xlsx"
+								},
+								{
+									"key": "delivery_id",
+									"value": "9c7d7f23-e5fc-44d7-805d-366027cabb9d",
+									"type": "text"
+								},
+								{
+									"key": "platform_id",
+									"value": "9c7c530f-60f6-4c56-be68-0f4eb527be4d",
+									"description": "mercado libre",
+									"type": "text"
+								},
+								{
+									"key": "platform_id",
+									"value": "9c5f25fa-be02-4b50-bf1b-5b6444255102",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs/import",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Delivery",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Delivery 1 EDIT\",\r\n    \"rut\" : \"44444\",\r\n    \"address\" : \"asdasdasdasd\",\r\n    \"address2\" : \"asdasdasdasd\",\r\n    \"phone\" : \"asdasd\",\r\n    \"change\" : true,\r\n    \"pending_payment\" : true,\r\n    \"platform_number\" : \"1312312\",\r\n    \"platform_order\" : \"1312355\",\r\n    \"comments\" : \"Comentario\",\r\n    \"platform_id\" : \"9c1b78fb-cd5b-46ba-9371-a341dcfe387f\",\r\n    \"city_id\" : \"9c1b78f4-cd5c-46d3-a9ed-504b713c72c1\",\r\n    \"delivery_id\" : \"9c1ee6f3-f2e3-40d7-81a0-0d3ec1499102\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs/9c1ee709-e2f7-4354-8b08-bfd567b65c27",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs",
+								"9c1ee709-e2f7-4354-8b08-bfd567b65c27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Delivery",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs/9c32b0c6-0dd9-455b-a70b-15f83586f707",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs",
+								"9c32b0c6-0dd9-455b-a70b-15f83586f707"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs/9c1ee709-e2f7-4354-8b08-bfd567b65c27",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs",
+								"9c1ee709-e2f7-4354-8b08-bfd567b65c27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "16|FF6tq3ERe5qanJ43TFFbuA4ZAc4y69gmAACa8gyQ342173de",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs/export",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs",
+								"export"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-07-09",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/cities",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Region",
+			"item": [
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/regions",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"regions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Platform",
+			"item": [
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/platforms",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "35|maLYMCandOXLhCKVIUZDGgV3CB7pOTlpEaArJY3Sa7f9d46b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/users/profile",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|ZLc37iCNR5hTG9xs60KB47n2rjx4bAw5j2V0gBj95ea3bbb7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/users/check-email?email=joel@mail.com",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"check-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "joel@mail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Mis envios)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|cZBF3bKd1Gg0PczECHFCzDssTQyQp3UqwSYtWF7l518efd54",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/users/my-deliveries",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"my-deliveries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|ttg9tTf36wjZ83nrTd88xBNSPHOAhrXfz3ywMtgJ5da86f7e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"name\" : \"test\",\r\n    // \"name2\" : \"test2\",\r\n    // \"last_name\" : \"apellido\",\r\n    // \"last_name2\" : \"apellido2\",\r\n    // \"phone\" : \"1234567\",\r\n    // \"gender\" : \"female\",\r\n    // \"email\" : \"postman@mail.com\",\r\n    // \"rut\" : \"6666\"\r\n    \"current_password\" : \"1234567\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/users/",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Providers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|lKPiZYOfMtluKC5NyS3AWqHojd46akZpp01gj36F439f18e8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/users/get-providers",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"get-providers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Companies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|lKPiZYOfMtluKC5NyS3AWqHojd46akZpp01gj36F439f18e8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/users/get-companies",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"get-companies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|FgPnIxsfXr92YueNzf79yyS3V0tirO8vdI9borkl3712b0e7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|rj1fxqcoux8fOuIeZCh1PHGxsChVWxmve6jZyxIXfe9fb56a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Empresa 1",
+									"type": "text"
+								},
+								{
+									"key": "business_name",
+									"value": "Empresa 1 SL",
+									"type": "text"
+								},
+								{
+									"key": "rut",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "123123123asdasdasd",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12312355",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "777777",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "9c791ee5-a16c-425f-80a8-99460162129e",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MRXLC/Pictures/Screenshots/Captura de pantalla 2024-02-06 194411.png"
+								},
+								{
+									"key": "email",
+									"value": "empresa@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|sNScVkhG8Y7X6mjHMp8s0CwVvt66do9uhCEJ5nsufe4bddf1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "business_name",
+									"value": "test S.L",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rut",
+									"value": "6666",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "string",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "44444",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mobile",
+									"value": "33333",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "9c791ee5-a16c-425f-80a8-99460162129e",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "mail@mail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MRXLC/Pictures/Screenshots/Captura de pantalla 2024-02-07 074019.png"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9c7c530f-f2f6-49e4-97d5-23336f4de000",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9c7c530f-f2f6-49e4-97d5-23336f4de000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9c5cf680-a56b-4492-b3c0-f69311ea310d",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9c5cf680-a56b-4492-b3c0-f69311ea310d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9c5cf680-a56b-4492-b3c0-f69311ea310d",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9c5cf680-a56b-4492-b3c0-f69311ea310d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"new_users\" : [\"9c65b35f-e0bd-4e8e-ae62-9f52df436572\"],\r\n    \"remove_users\" : []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9c65b360-20c2-4c19-b73a-ea789c58d42e/sync-users",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9c65b360-20c2-4c19-b73a-ea789c58d42e",
+								"sync-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9c700970-b459-42c1-a761-647ef7282394/get-users",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9c700970-b459-42c1-a761-647ef7282394",
+								"get-users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery Status",
+			"item": [
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-statuses",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-statuses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
