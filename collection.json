@@ -227,7 +227,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|rj1fxqcoux8fOuIeZCh1PHGxsChVWxmve6jZyxIXfe9fb56a",
+									"value": "7|w3s46Wj40i9wD6rJ0dFEzud9XaojnBiJ7b7k1U5Kea9c001d",
 									"type": "string"
 								}
 							]
@@ -279,18 +279,19 @@
 								},
 								{
 									"key": "city_id",
-									"value": "9c791ee5-a16c-425f-80a8-99460162129e",
+									"value": "9c7c5303-8648-4738-a8fe-b0e57ffb0e75",
 									"type": "text"
 								},
 								{
 									"key": "company_id",
-									"value": "9c7929d2-2fa6-462f-862d-69bed7780fce",
+									"value": "9c7c530f-f2f6-49e4-97d5-23336f4de000",
 									"type": "text"
 								},
 								{
 									"key": "file",
 									"type": "file",
-									"src": "/C:/Users/MRXLC/Pictures/Screenshots/Captura de pantalla 2024-02-05 115933.png"
+									"src": "/C:/Users/MRXLC/Pictures/Screenshots/Captura de pantalla 2024-02-05 115933.png",
+									"disabled": true
 								}
 							]
 						},
@@ -823,7 +824,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "4|FgPnIxsfXr92YueNzf79yyS3V0tirO8vdI9borkl3712b0e7",
+									"value": "7|w3s46Wj40i9wD6rJ0dFEzud9XaojnBiJ7b7k1U5Kea9c001d",
 									"type": "string"
 								}
 							]
@@ -837,7 +838,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"date\" : \"2024-08-17\",\r\n    \"status\" : 0,\r\n    \"provider_id\" : \"9c791ef5-6d1d-4f05-bcad-518cc3d0adf1\",\r\n    \"delivery_status_id\" : \"9c791ee2-3321-4bf1-9546-bbe594f6c7df\"\r\n}",
+							"raw": "{\r\n    \"date\" : \"2024-08-17\",\r\n    \"status\" : 0,\r\n    \"provider_id\" : \"9c7c5310-aeec-413c-9b4b-d98a234be4fd\",\r\n    \"delivery_status_id\" : \"9c7c5302-2dbf-4426-8219-b8427938963f\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1039,6 +1040,49 @@
 									"value": "1996-11-02",
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status By Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|UMbf44DNGI16ii2PdCoBJBStbpMRVHBKIIswHKZlc6c35a8e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\" : \"2024-08-17\",\r\n    \"company_id\" : \"9c7c530f-f2f6-49e4-97d5-23336f4de000\",\r\n    \"current_status\" : \"9c7c5302-2dbf-4426-8219-b8427938963f\",\r\n    \"new_status\" : \"9c7c5302-5afd-4385-8cd2-ee73a9bf5ad6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/deliveries/update-status-by-company",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"deliveries",
+								"update-status-by-company"
 							]
 						}
 					},
@@ -1694,7 +1738,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "4|FgPnIxsfXr92YueNzf79yyS3V0tirO8vdI9borkl3712b0e7",
+									"value": "6|5KyO2LjBJjrbfvpZKPgknC45ERBfewyK4MT5OgXla4513f6e",
 									"type": "string"
 								}
 							]
