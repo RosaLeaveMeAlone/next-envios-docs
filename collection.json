@@ -55,7 +55,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman@mail.com\",\r\n    \"password\" : \"123456\",\r\n    // \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\",\r\n    \"provider_id\" : \"9c65b360-4577-43f4-a494-3f7451c16ec9\",\r\n    \"company_id\" : \"9c65b360-20c2-4c19-b73a-ea789c58d42e\"\r\n}",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    // \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    // \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman3@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\"\r\n    // \"provider_id\" : \"9c65b360-4577-43f4-a494-3f7451c16ec9\",\r\n    // \"company_id\" : \"9c65b360-20c2-4c19-b73a-ea789c58d42e\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1300,14 +1300,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl2}}/api/delivery-packs/9c32b0c6-0dd9-455b-a70b-15f83586f707",
+							"raw": "{{baseUrl2}}/api/delivery-packs/9c7d852f-e2b4-454b-bd2f-b61af47db966",
 							"host": [
 								"{{baseUrl2}}"
 							],
 							"path": [
 								"api",
 								"delivery-packs",
-								"9c32b0c6-0dd9-455b-a70b-15f83586f707"
+								"9c7d852f-e2b4-454b-bd2f-b61af47db966"
 							]
 						}
 					},
@@ -1333,6 +1333,51 @@
 								"api",
 								"delivery-packs",
 								"9c1ee709-e2f7-4354-8b08-bfd567b65c27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|BYNf6xZg9h2chAcPVVqlW8lCj5eDBL1UFSpPZF9ke5275cc3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\" : \"2024-07-20\",\r\n    \"action\" : \"Reprogramado\" //'Cancelado','Reprogramado'\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/delivery-packs/9c7d852f-e2b4-454b-bd2f-b61af47db966/change-status",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"delivery-packs",
+								"9c7d852f-e2b4-454b-bd2f-b61af47db966",
+								"change-status"
 							]
 						}
 					},
