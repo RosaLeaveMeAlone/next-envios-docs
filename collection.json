@@ -1586,6 +1586,40 @@
 					"response": []
 				},
 				{
+					"name": "Dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|O1lq9qSA5h6Ov4tM5lrnojQ9Mh2zYzgRsWdOpXDQb6fe73ec",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/users/dashboard",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Check Email",
 					"request": {
 						"auth": {
