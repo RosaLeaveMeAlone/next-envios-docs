@@ -55,7 +55,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    // \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    // \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman3@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\"\r\n    // \"provider_id\" : \"9c65b360-4577-43f4-a494-3f7451c16ec9\",\r\n    // \"company_id\" : \"9c65b360-20c2-4c19-b73a-ea789c58d42e\"\r\n}",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    // \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    // \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman4@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\"\r\n    // \"provider_id\" : \"9c65b360-4577-43f4-a494-3f7451c16ec9\",\r\n    // \"company_id\" : \"9c65b360-20c2-4c19-b73a-ea789c58d42e\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -97,10 +97,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl2}}/api/auth/forgot-password",
+							"raw": "localhost:3000/api/auth/forgot-password",
 							"host": [
-								"{{baseUrl2}}"
+								"localhost"
 							],
+							"port": "3000",
 							"path": [
 								"api",
 								"auth",
@@ -227,7 +228,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "7|w3s46Wj40i9wD6rJ0dFEzud9XaojnBiJ7b7k1U5Kea9c001d",
+									"value": "4|Jv52rjD3JGQheohe67aAjHEJFGI1Kpeco53VO89nd9abd8d1",
 									"type": "string"
 								}
 							]
@@ -279,12 +280,12 @@
 								},
 								{
 									"key": "city_id",
-									"value": "9c7c5303-8648-4738-a8fe-b0e57ffb0e75",
+									"value": "9cabda84-412e-463d-9471-0a85cf83f72a",
 									"type": "text"
 								},
 								{
 									"key": "company_id",
-									"value": "9c7c530f-f2f6-49e4-97d5-23336f4de000",
+									"value": "9cabda87-b8cc-4e76-904c-e1492ec3afff",
 									"type": "text"
 								},
 								{
@@ -1593,7 +1594,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "14|O1lq9qSA5h6Ov4tM5lrnojQ9Mh2zYzgRsWdOpXDQb6fe73ec",
+									"value": "56|7jWEVpVVSQqtG7AGUUO8GnCENvJmxYLygpRKPOnh6bfbdbd5",
 									"type": "string"
 								}
 							]
@@ -1778,7 +1779,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "8|lKPiZYOfMtluKC5NyS3AWqHojd46akZpp01gj36F439f18e8",
+									"value": "1|RY8XKlOacAWUXEF5zCy6gCBznYFyorKdg7J2agYpba75e0ce",
 									"type": "string"
 								}
 							]
@@ -1811,6 +1812,40 @@
 			"item": [
 				{
 					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|5KyO2LjBJjrbfvpZKPgknC45ERBfewyK4MT5OgXla4513f6e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index Copy",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -2026,6 +2061,51 @@
 					"response": []
 				},
 				{
+					"name": "Pay Suscription",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|Jv52rjD3JGQheohe67aAjHEJFGI1Kpeco53VO89nd9abd8d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plan_id\" : \"4b64ba34-949a-499b-9dcc-1d2e3b3ea894\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9cabda87-b8cc-4e76-904c-e1492ec3afff/pay-suscription",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9cabda87-b8cc-4e76-904c-e1492ec3afff",
+								"pay-suscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Show",
 					"request": {
 						"method": "GET",
@@ -2122,6 +2202,310 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Payments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|qOu7FweI7ei1EEiybeUKosSpxYAMxmZonqTomz9R2c39d5b8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9c7c530f-f2f6-49e4-97d5-23336f4de000/get-payments",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9c7c530f-f2f6-49e4-97d5-23336f4de000",
+								"get-payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Provider Invitation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|RY8XKlOacAWUXEF5zCy6gCBznYFyorKdg7J2agYpba75e0ce",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test\",\r\n    \"email\" : \"joeluzcategui103@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9cabda87-b8cc-4e76-904c-e1492ec3afff/provider-invitation",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9cabda87-b8cc-4e76-904c-e1492ec3afff",
+								"provider-invitation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Provider Invitation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|RY8XKlOacAWUXEF5zCy6gCBznYFyorKdg7J2agYpba75e0ce",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test\",\r\n    \"email\" : \"joeluzcategui103@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/provider-invitation/9cb068e2-2960-46ba-8e4a-7cd35b7a4c2b",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"provider-invitation",
+								"9cb068e2-2960-46ba-8e4a-7cd35b7a4c2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Provider invitation",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    // \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    // \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman4@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\",\r\n    \"provider_name\" : \"provider de prueba\",\r\n    \"business_name\" : \"Proveedor de prueba OU\",\r\n    \"provider_rut\" : \"555666555\",\r\n    \"address\" : \"Direccion de prueba\",\r\n    \"provider_phone\" : \"777777777\",\r\n    \"mobile\" : \"8888888\",\r\n    \"tracking_link\" : \"joel-uzcategui.com\",\r\n    \"city_id\" : \"9cabda84-412e-463d-9471-0a85cf83f72a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/provider-invitation/9cb068e2-2960-46ba-8e4a-7cd35b7a4c2b/submit",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"provider-invitation",
+								"9cb068e2-2960-46ba-8e4a-7cd35b7a4c2b",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Provider Invitation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|RY8XKlOacAWUXEF5zCy6gCBznYFyorKdg7J2agYpba75e0ce",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9cabda87-b8cc-4e76-904c-e1492ec3afff/provider-invitation",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9cabda87-b8cc-4e76-904c-e1492ec3afff",
+								"provider-invitation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Cities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|RY8XKlOacAWUXEF5zCy6gCBznYFyorKdg7J2agYpba75e0ce",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"city_ids\" : [\"9cabda84-412e-463d-9471-0a85cf83f72a\",\"9cabda84-4ec3-40c5-b37d-c2ed164a468f\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/companies/9cabda87-b8cc-4e76-904c-e1492ec3afff/sync-cities",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"9cabda87-b8cc-4e76-904c-e1492ec3afff",
+								"sync-cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detach City",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|RY8XKlOacAWUXEF5zCy6gCBznYFyorKdg7J2agYpba75e0ce",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"city_id\" : \"9cabda84-4ec3-40c5-b37d-c2ed164a468f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/test",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"test"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -2159,6 +2543,57 @@
 							"path": [
 								"api",
 								"delivery-statuses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plan",
+			"item": [
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "80|zkb03s69ip8sS8yjZfkFTHyIi1vykLilSsFN1Uuxf75016e9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut\" : \"23232323\",\r\n    \"name\" : \"Postman\",\r\n    \"name2\" : \"Postman2\",\r\n    \"last_name\" : \"API\",\r\n    \"last_name2\" : \"API2\",\r\n    \"email\" : \"postman@mail.com\",\r\n    \"password\" : \"123456\",\r\n    \"password_confirmation\" : \"123456\",\r\n    \"phone\" : \"2222222\",\r\n    \"gender\" : \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl2}}/api/plans",
+							"host": [
+								"{{baseUrl2}}"
+							],
+							"path": [
+								"api",
+								"plans"
 							]
 						}
 					},
